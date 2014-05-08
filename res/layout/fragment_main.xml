@@ -11,41 +11,46 @@
     tools:context="com.example.homework1.MainActivity$PlaceholderFragment" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/display"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:gravity="right"
-        android:inputType="number" />
+        android:inputType="none"
+        android:text="@string/display" />
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/mc"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/mc" />
+            android:text="@string/mc"
+            tools:ignore="NestedWeights" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/mPlus"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/mPlus" />
+            android:text="@string/mAdd" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/mMinus"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/mMinus" />
+            android:text="@string/mSub" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/mr"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -54,33 +59,35 @@
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/clear"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight="1.0"
-            android:text="@string/clear" />
+            android:layout_weight="1"
+            android:text="@string/clear"
+            tools:ignore="NestedWeights" />
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/pn"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:text="@string/pm" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/divide"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/slash" />
+            android:text="@string/divide" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/multiply"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
@@ -89,73 +96,77 @@
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/seven"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/seven" />
+            android:text="@string/seven"
+            tools:ignore="NestedWeights" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/eight"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:text="@string/eight" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/nine"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:text="@string/nine" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/subtract"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/minus" />
+            android:text="@string/subtract" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1" >
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/four"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/four" />
+            android:text="@string/four"
+            tools:ignore="NestedWeights" />
 
         <Button
-            android:id="@+id/button14"
+            android:id="@+id/five"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:text="@string/five" />
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/six"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:text="@string/six" />
 
         <Button
-            android:id="@+id/button16"
+            android:id="@+id/add"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/plus" />
-
+            android:text="@string/add" />
+        
     </LinearLayout>
 
     <LinearLayout
@@ -167,7 +178,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            tools:ignore="NestedWeights" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -175,21 +187,21 @@
                 android:layout_weight="1" >
 
                 <Button
-                    android:id="@+id/button17"
+                    android:id="@+id/one"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/one" />
 
                 <Button
-                    android:id="@+id/button18"
+                    android:id="@+id/two"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
                     android:text="@string/two" />
 
                 <Button
-                    android:id="@+id/button19"
+                    android:id="@+id/three"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
@@ -204,18 +216,18 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/button20"
+                    android:id="@+id/zero"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="2"
                     android:text="@string/zero" />
 
                 <Button
-                    android:id="@+id/button21"
+                    android:id="@+id/point"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:text="@string/dot" />
+                    android:text="@string/point" />
 
             </LinearLayout>
 
@@ -227,10 +239,10 @@
             android:layout_weight="1" >
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/equal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/equals" />
+                android:text="@string/equal" />
 
         </LinearLayout>
 

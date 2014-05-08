@@ -5,17 +5,17 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="mc">MC</string>
-    <string name="mPlus">M+</string>
-    <string name="mMinus">M-</string>
+    <string name="mAdd">M+</string>
+    <string name="mSub">M-</string>
     <string name="mr">MR</string>
     <string name="clear">C</string>
     <string name="pm">+/-</string>
-    <string name="slash">/</string>
+    <string name="divide">/</string>
     <string name="multiply">*</string>
-    <string name="minus">-</string>
-    <string name="plus">+</string>
-    <string name="equals">=</string>
-    <string name="dot">.</string>
+    <string name="subtract">-</string>
+    <string name="add">+</string>
+    <string name="equal">=</string>
+    <string name="point">.</string>
     <string name="nine">9</string>
     <string name="eight">8</string>
     <string name="seven">7</string>
@@ -27,5 +27,6 @@
     <string name="one">1</string>
     <string name="zero">0</string>
     <string name="and23719">AND23719</string>
+    <string name="display"></string>
 
 </resources>
