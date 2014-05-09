@@ -1026,8 +1026,8 @@ containing a value of this type.
         public static final int image=0x7f050027;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
-        public static final int mMinus=0x7f050041;
-        public static final int mPlus=0x7f050040;
+        public static final int mAdd=0x7f050040;
+        public static final int mSub=0x7f050041;
         public static final int mc=0x7f05003f;
         public static final int middle=0x7f050012;
         public static final int mr=0x7f050042;
@@ -1037,7 +1037,7 @@ containing a value of this type.
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int one=0x7f05004f;
-        public static final int pn=0x7f050044;
+        public static final int pm=0x7f050044;
         public static final int point=0x7f050053;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
@@ -1170,32 +1170,8 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a000f;
-        public static final int add=0x7f0a0019;
-        public static final int and23719=0x7f0a0026;
         public static final int app_name=0x7f0a000d;
-        public static final int clear=0x7f0a0014;
-        public static final int display=0x7f0a0027;
-        public static final int divide=0x7f0a0016;
-        public static final int eight=0x7f0a001d;
-        public static final int equal=0x7f0a001a;
-        public static final int five=0x7f0a0020;
-        public static final int four=0x7f0a0021;
         public static final int hello_world=0x7f0a000e;
-        public static final int mAdd=0x7f0a0011;
-        public static final int mSub=0x7f0a0012;
-        public static final int mc=0x7f0a0010;
-        public static final int mr=0x7f0a0013;
-        public static final int multiply=0x7f0a0017;
-        public static final int nine=0x7f0a001c;
-        public static final int one=0x7f0a0024;
-        public static final int pm=0x7f0a0015;
-        public static final int point=0x7f0a001b;
-        public static final int seven=0x7f0a001e;
-        public static final int six=0x7f0a001f;
-        public static final int subtract=0x7f0a0018;
-        public static final int three=0x7f0a0022;
-        public static final int two=0x7f0a0023;
-        public static final int zero=0x7f0a0025;
     }
     public static final class style {
         /** 

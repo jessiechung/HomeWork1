@@ -19,7 +19,7 @@
         android:focusableInTouchMode="false"
         android:gravity="right"
         android:inputType="none"
-        android:text="@string/display" />
+        android:text="" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -32,29 +32,32 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/mc"
-            tools:ignore="NestedWeights" />
+            android:text="MC"
+            tools:ignore="NestedWeights,HardcodedText" />
 
         <Button
-            android:id="@+id/mPlus"
+            android:id="@+id/mAdd"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/mAdd" />
+            android:text="M+"
+            tools:ignore="HardcodedText" />
 
         <Button
-            android:id="@+id/mMinus"
+            android:id="@+id/mSub"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/mSub" />
+            android:text="M-"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/mr"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/mr" />
+            android:text="MR"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 
@@ -69,29 +72,35 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/clear"
-            tools:ignore="NestedWeights" />
+            android:onClick="onClick"
+            android:text="C"
+            tools:ignore="NestedWeights,HardcodedText" />
 
         <Button
-            android:id="@+id/pn"
+            android:id="@+id/pm"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/pm" />
+            android:text="+/-"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/divide"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/divide" />
+            android:onClick="onClick"
+            android:text="/"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/multiply"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/multiply" />
+            android:onClick="onClick"
+            android:text="*"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 
@@ -106,29 +115,36 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/seven"
-            tools:ignore="NestedWeights" />
+            android:onClick="onClick"
+            android:text="7"
+            tools:ignore="NestedWeights,HardcodedText" />
 
         <Button
             android:id="@+id/eight"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/eight" />
+            android:onClick="onClick"
+            android:text="8"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/nine"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/nine" />
+            android:onClick="onClick"
+            android:text="9"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/subtract"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/subtract" />
+            android:onClick="onClick"
+            android:text="-"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 
@@ -143,29 +159,36 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/four"
-            tools:ignore="NestedWeights" />
+            android:onClick="onClick"
+            android:text="4"
+            tools:ignore="NestedWeights,HardcodedText" />
 
         <Button
             android:id="@+id/five"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/five" />
+            android:onClick="onClick"
+            android:text="5"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/six"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/six" />
+            android:onClick="onClick"
+            android:text="6"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/add"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="@string/add" />
+            android:onClick="onClick"
+            android:text="+"
+            tools:ignore="HardcodedText" />
         
     </LinearLayout>
 
@@ -191,21 +214,27 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:text="@string/one" />
+                    android:onClick="onClick"
+                    android:text="1"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/two"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:text="@string/two" />
+                    android:onClick="onClick"
+                    android:text="2"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/three"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:text="@string/three" />
+                    android:onClick="onClick"
+                    android:text="3"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -220,14 +249,18 @@
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="2"
-                    android:text="@string/zero" />
+                    android:onClick="onClick"
+                    android:text="0"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/point"
                     android:layout_width="0dp"
                     android:layout_height="fill_parent"
                     android:layout_weight="1"
-                    android:text="@string/point" />
+                    android:onClick="onClick"
+                    android:text="."
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -242,7 +275,9 @@
                 android:id="@+id/equal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:text="@string/equal" />
+                android:onClick="onClick"
+                android:text="="
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -253,6 +288,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:text="@string/and23719" />
+        android:text="AND23719"
+        tools:ignore="HardcodedText" />
 
 </LinearLayout>
