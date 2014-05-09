@@ -1,5 +1,7 @@
 package com.example.homework1;
 
+import java.math.BigDecimal;
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -18,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
 	private static EditText textDisplay;
 	private static Button btnAdd, btnSub, btnMul, btnDiv, btnEqu, btnPoint;
 	private static Button btnOne, btnTwo, btnThree, btnFour, btnFive, btnSix, btnSeven, btnEight, btnNine, btnZero;
-	private float result = 0, num = 0;
+	private static BigDecimal result, num;
 	private String op = "", tmp = "";
 
 	@Override
@@ -59,49 +61,48 @@ public class MainActivity extends ActionBarActivity {
 		case R.id.add:
 			calculate();
 			op = btnAdd.getText().toString();
-			tmp = "";
 			break;
 		
 		case R.id.subtract:
 			calculate();
 			op = btnSub.getText().toString();
-			tmp = "";
 			break;
 			
 		case R.id.multiply:
-			calculate();
+			calculate();	
 			op = btnMul.getText().toString();
-			tmp = "";
 			break;
 			
 		case R.id.divide:
-			calculate();					
+			calculate();
 			op = btnDiv.getText().toString();
-			tmp = "";
 			break;
 			
 		case R.id.equal:
 			calculate();
 			op = btnEqu.getText().toString();
-			tmp = String.valueOf(result);
 			break;
 			
 		case R.id.clear:
 			clear();
-			textDisplay.setText(tmp);
+			textDisplay.setText("0");
 			break;
 			
 		case R.id.point:
 			if (TextUtils.isEmpty(tmp)) tmp = "0";
-			tmp = tmp + btnPoint.getText().toString();
+			if (tmp.indexOf(".") == -1) tmp = tmp + btnPoint.getText().toString();
 			textDisplay.setText(tmp);
 			break;
 			
 		case R.id.zero:
-			if (TextUtils.isEmpty(tmp) || tmp.equals("0")) tmp = "";
 			if (btnEqu.getText().toString().equals(op)) clear();
-			tmp = tmp + btnZero.getText().toString();
-			textDisplay.setText(tmp);
+			if (TextUtils.isEmpty(tmp) || tmp.equals("0")) {
+				tmp = "";
+				textDisplay.setText("0");
+			} else {
+				tmp = tmp + btnZero.getText().toString();
+				textDisplay.setText(tmp);
+			}
 			break;
 			
 		case R.id.one:
@@ -162,40 +163,56 @@ public class MainActivity extends ActionBarActivity {
 	
 	private void calculate() {
 		if (TextUtils.isEmpty(tmp) && !TextUtils.isEmpty(op)) return;
+		String res = "";
 		
-		if (TextUtils.isEmpty(tmp)) num = 0;
-		else num = Float.parseFloat(tmp);
-		Log.d("debug", "num="+num);
-		Log.d("debug", "result="+result);
+		try {
+			if (TextUtils.isEmpty(tmp)) num = BigDecimal.valueOf(0);
+			else num = new BigDecimal(tmp);
+			
+			if (btnAdd.getText().toString().equals(op)) {
+				result = result.add(num) ;
+				tmp = "";
+			} else if (btnSub.getText().toString().equals(op)) {
+				result = result.subtract(num);
+				tmp = "";
+			} else if (btnMul.getText().toString().equals(op)) {
+				result = result.multiply(num);
+				tmp = "";
+			} else if (btnDiv.getText().toString().equals(op)) {
+				result = result.divide(num);
+				tmp = "";
+			} else if (btnEqu.getText().toString().equals(op)) {
+				result = num;
+				tmp = display(String.valueOf(result));
+			} else {
+				result = num;
+				tmp = "";
+			}
+			
+			res = display(String.valueOf(result));
+		} catch (Exception e) {
+			Log.e("error", e.getMessage());
+			clear();
+			res = "ERROR";
+		}
 		
-		if (btnAdd.getText().toString().equals(op))
-			result = result + num;
-		else if (btnSub.getText().toString().equals(op))
-			result = result - num;
-		else if (btnMul.getText().toString().equals(op))
-			result = result * num;
-		else if (btnDiv.getText().toString().equals(op))
-			result = result / num;
-		else
-			result = num;
-		
-		String res = display(String.valueOf(result));
 		textDisplay.setText(res);
 	}
 	
     private String display(String str) {
     	String res = str;
+        
 		String[] resList = res.split("\\.");
 		if (resList.length > 1 && Integer.parseInt(resList[1]) == 0) res = resList[0];
-		
+
 		return res;
     }
     
     private void clear() {
     	op = "";
 		tmp = "";
-		num = 0;
-		result = 0;
+		num = BigDecimal.valueOf(0);
+		result = BigDecimal.valueOf(0);
     }
 
 	/**
@@ -210,6 +227,9 @@ public class MainActivity extends ActionBarActivity {
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_main, container,	false);
+			
+			result = new BigDecimal("0");
+			num = new BigDecimal("0");
 			
 			textDisplay = (EditText) rootView.findViewById(R.id.display);
 						
